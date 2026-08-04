@@ -1,0 +1,74 @@
+<doctype.html>
+<html>
+<head>
+<title>Admin panel</title>
+ <link ref="stylesheet" href="style.css">
+ </head>
+    <body><style>
+        body{
+            margin: 5;
+            font-family: Arial, Helvetica, sans-serif;
+            }
+            header{
+                background: #004080;
+                color: greenyellow;
+                padding-left: 10;
+                text-align: center;
+            }
+            title{
+                color: deeppink;
+                text-align: center;
+                text-decoration: brown;
+                margin: 10;
+            }
+    </style>
+    <div class="container">
+        <header>
+ <h2>Add new Book</h2>
+ </header>
+ <form id="=bookform">
+    <input type="text"id="title"
+    placeholder="Book title"Required>
+    <input type="text"id="Author"
+    placeholder="Author"Required>
+    <input type="text"id="Category"
+    placeholder="Category"required>
+    <button type="=SUBMIT">Add Book</button>
+ </form>
+    </div>
+
+
+
+<script>
+        const API = 'http://localhost:3000';
+    const form =
+    document.getElementById(BookForm');
+    form .addEventListener('submit,async(e)=>
+    {
+        e.preventDefault();
+        const title =
+        document.getElementById('Title').value;
+         const Author =
+         document.getElementById('Author').value;
+         const Category =
+         document.getElementById('Category').value
+         const  response = await fetch('$API}/BOOKS'{
+            method:'POST' ,
+            headers:{
+                constent-type':'application/JSON'
+            },
+            body: JSON.stringify({
+                title,
+                Author,
+                Category,
+            })
+            const data = a wait response.JSON();
+            alert(data.message);
+            form.reset();
+        })
+
+    </script>
+    </body>
+    </html>
+ 
+ 

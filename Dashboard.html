@@ -1,0 +1,178 @@
+<doctype.html>
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>NYONDO SECONDARY SCHOOL E-LIBRARY</title>
+    <link rel="stylesheet"href="style.css"
+    </head>
+    <body><style>
+        body{
+            margin: 2;
+            font-family: Arial, Helvetica, sans-serif;
+            }
+            header{
+                background: #004080;
+                color: greenyellow;
+                padding-left: 10;
+                text-align: center;
+            }
+            hello{
+                text-align: center;
+                text-decoration: solid;
+                margin: 10;
+            }
+        
+    </style>
+        <header
+        <h1>NYONDO SECONDARY SCHOOL E-LIBRARY</h1>
+    </heaader>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="books.html">Books</a>
+        <a href="students-login.PHP">students-login</a>
+        <a href="admin-loin.PHP">Admin</a>
+    </nav>
+    <section class="HELLO">
+        <h2>Digital Learning for Every student</h2>
+        <p>Access E-Library resources anytime,anywhere.</p>
+    </section>
+    </body>
+        body{
+            body{
+   background-image: url(images/nyondo\ secondary\ school\ buildings.jpeg.jpg);
+         background-size:contain;
+         background-position:center;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         font-family: Arial, Helvetica, sans-serif;
+         font-color: blue ;
+         font-size: 30;
+         margin: 30;
+        font-family: Arial, Helvetica, sans-serif;
+       }
+            title{
+                background-color:blue;
+                font: size 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align:center;
+            }
+            header{
+                background: #004080;
+                color: greenyellow;
+                padding-left: 10;
+                text-align: center;
+            }
+            Digital E-Library Category{
+                text-align: center;
+                text-decoration: solid;
+                margin: 15;
+                font-family:Arial;
+            }
+            Class{
+                text-align:center;
+                background-attachment:blue;
+                padding-left:10;
+
+            }
+ </style>
+  </body>
+  <header>
+    <div class="container">
+        <h2>SELET THE BOOKS</h2>
+    </header>
+ <form id="=bookform">
+    <input type="text"id="title"
+    placeholder="Book title"Required>
+    <input type="text"id="Author"
+    placeholder="Author"Required>
+    <input type="text"id="Category"
+    placeholder="Category"required>
+    <input type="=text"id="Subject"
+    placeholder="Subject"required>
+    <header
+    <h3>Digital E-library</h3>
+ </header>
+ Geography:<br>
+ <select name="Geography">
+<option>Maps</option>
+ <option>notes</option><br> 
+Mathematics:<br><br>
+<select name="Mathematics"><br>
+ <option>textbooks</option>
+<option>pastpapers</option>
+English:<br>
+<select name="English"><br>
+<option>Novals</option>
+<option>Grammer books</option>
+Chemistry:<br>
+<select name="chemistry"><br>
+<option>pratical guide</option>
+ <option>notes</option>
+Physics:<br>
+<select name="physics"><br>
+<option>pratical_guide</option>
+<option>notes</option>
+Agriculture:<br>
+<select name="agriculture"><br>
+ <option>pratical guide</option>
+ <option>notes</option>
+Computer:<br>
+<select name="Computer"><br>
+ <option>pratical guide</option>
+ <option>notes</option><br>
+ Class:<br><br>
+ <select id="class_level"><br>
+        <option>senior one</option>
+        <option>senior Two</option>
+        <option>senior Three</option>
+        <option>senior Four</option>
+        <option>senior Five</option>
+        <option>senior Six</option>
+ </select>
+    <input type="=text"id="TOPIC"
+    placeholder="=TOPIC"required>
+    <input type="text"id="PDF_file"
+    placeholder="PDF_file path"
+    <tr><br>
+    <button>Add Book</button><br>
+    <button>delete Book</button><br>
+   </tr>
+ </form>
+    </div>
+
+    <script>
+        const API = 'http://localhost:3000';
+    const form =
+    document.getElementById(BookForm');
+    form .addEventListener('submit,async(e)=>
+    {
+        e.preventDefault();
+        const title =
+        document.getElementById('Title').value;
+         const Author =
+         document.getElementById('Author').value;
+         const Category =
+         document.getElementById('Category').value
+         const  response = await fetch('$API}/BOOKS'{
+            method:'POST' ,
+            headers:{
+                constent-type':'application/JSON'
+            },
+            body: JSON.stringify({
+                title,
+                Author,
+                Category,
+            })
+            const data = a wait response.JSON();
+            alert(data.message);
+            form.reset();
+        });
+        <p>BOOKS AVAILABILIY TRACKING</p>
+        <
+
+
+    </script>
+    </body>
+    </html>
+ 
+ 
